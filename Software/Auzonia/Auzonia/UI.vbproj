@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D41522E-7324-41ED-8440-FF5385D179E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>UI.My.MyApplication</StartupObject>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>Auzonia</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Auzonia.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Auzonia.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>NeuMek.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.7.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuzoniaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuzoniaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuzoniaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuzoniaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormAcerca.Designer.vb">
+      <DependentUpon>FormAcerca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAcerca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArbolDePermisos.Designer.vb">
+      <DependentUpon>FormArbolDePermisos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormArbolDePermisos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAyuda.Designer.vb">
+      <DependentUpon>FormAyuda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAyuda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformeMovimientosSalidaPorFecha.Designer.vb">
+      <DependentUpon>FormInformeMovimientosSalidaPorFecha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInformeMovimientosSalidaPorFecha.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformesMovimientos.Designer.vb">
+      <DependentUpon>FormInformesMovimientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInformesMovimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaDePrecios.Designer.vb">
+      <DependentUpon>FormListaDePrecios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaDePrecios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotaDeEnvio.Designer.vb">
+      <DependentUpon>FormNotaDeEnvio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNotaDeEnvio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevaListaCompras.Designer.vb">
+      <DependentUpon>FormNuevaListaCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevaListaCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoRemitoProveedor.Designer.vb">
+      <DependentUpon>FormNuevoRemitoProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevoRemitoProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemitoProveedor.Designer.vb">
+      <DependentUpon>FormRemitoProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormRemitoProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevaNotaDePedido.Designer.vb">
+      <DependentUpon>FormNuevaNotaDePedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevaNotaDePedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmPerfilesUsuarios.Designer.vb">
+      <DependentUpon>FormAdmPerfilesUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdmPerfilesUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArticulo.Designer.vb">
+      <DependentUpon>FormArticulo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormArticulo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBackUp.Designer.vb">
+      <DependentUpon>FormBackUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBackUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBitacora.Designer.vb">
+      <DependentUpon>FormBitacora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBitacora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBitacoraCambios.Designer.vb">
+      <DependentUpon>FormBitacoraCambios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBitacoraCambios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCambiarIdioma.Designer.vb">
+      <DependentUpon>FormCambiarIdioma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCambiarIdioma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCliente.Designer.vb">
+      <DependentUpon>FormCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIdioma.Designer.vb">
+      <DependentUpon>FormIdioma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormIdioma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIniciarSesion.Designer.vb">
+      <DependentUpon>FormIniciarSesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormIniciarSesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotaDePedido.Designer.vb">
+      <DependentUpon>FormNotaDePedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNotaDePedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoIdioma.Designer.vb">
+      <DependentUpon>FormNuevoIdioma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevoIdioma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoPedidoDeCliente.Designer.vb">
+      <DependentUpon>FormNuevoPedidoDeCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevoPedidoDeCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoPerfil.Designer.vb">
+      <DependentUpon>FormNuevoPerfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevoPerfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPedidoDeCliente.Designer.vb">
+      <DependentUpon>FormPedidoDeCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPedidoDeCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProveedores.Designer.vb">
+      <DependentUpon>FormProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRestore.Designer.vb">
+      <DependentUpon>FormRestore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormRestore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormValuacion.Designer.vb">
+      <DependentUpon>FormValuacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormValuacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIPrincipal.Designer.vb">
+      <DependentUpon>MDIPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormAcerca.resx">
+      <DependentUpon>FormAcerca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArbolDePermisos.resx">
+      <DependentUpon>FormArbolDePermisos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAyuda.resx">
+      <DependentUpon>FormAyuda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInformeMovimientosSalidaPorFecha.resx">
+      <DependentUpon>FormInformeMovimientosSalidaPorFecha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInformesMovimientos.resx">
+      <DependentUpon>FormInformesMovimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaDePrecios.resx">
+      <DependentUpon>FormListaDePrecios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotaDeEnvio.resx">
+      <DependentUpon>FormNotaDeEnvio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevaListaCompras.resx">
+      <DependentUpon>FormNuevaListaCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoRemitoProveedor.resx">
+      <DependentUpon>FormNuevoRemitoProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemitoProveedor.resx">
+      <DependentUpon>FormRemitoProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevaNotaDePedido.resx">
+      <DependentUpon>FormNuevaNotaDePedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdmPerfilesUsuarios.resx">
+      <DependentUpon>FormAdmPerfilesUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArticulo.resx">
+      <DependentUpon>FormArticulo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBackUp.resx">
+      <DependentUpon>FormBackUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBitacora.resx">
+      <DependentUpon>FormBitacora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBitacoraCambios.resx">
+      <DependentUpon>FormBitacoraCambios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCambiarIdioma.resx">
+      <DependentUpon>FormCambiarIdioma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCliente.resx">
+      <DependentUpon>FormCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIdioma.resx">
+      <DependentUpon>FormIdioma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIniciarSesion.resx">
+      <DependentUpon>FormIniciarSesion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotaDePedido.resx">
+      <DependentUpon>FormNotaDePedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoIdioma.resx">
+      <DependentUpon>FormNuevoIdioma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoPedidoDeCliente.resx">
+      <DependentUpon>FormNuevoPedidoDeCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoPerfil.resx">
+      <DependentUpon>FormNuevoPerfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPedidoDeCliente.resx">
+      <DependentUpon>FormPedidoDeCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProveedores.resx">
+      <DependentUpon>FormProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRestore.resx">
+      <DependentUpon>FormRestore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormValuacion.resx">
+      <DependentUpon>FormValuacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIPrincipal.resx">
+      <DependentUpon>MDIPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportSalidasPorFecha.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="AuzoniaDataSet.xsc">
+      <DependentUpon>AuzoniaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AuzoniaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuzoniaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AuzoniaDataSet.xss">
+      <DependentUpon>AuzoniaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AuzoniaDataSet1.xsc">
+      <DependentUpon>AuzoniaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AuzoniaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuzoniaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AuzoniaDataSet1.xss">
+      <DependentUpon>AuzoniaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ManualUsuario.pdf" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.vbproj">
+      <Project>{c0896aaa-f2ea-4197-88d1-ea272f0fd7f9}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL_TECNICA.vbproj">
+      <Project>{4aed8b90-757c-4bca-829b-04d3759c1617}</Project>
+      <Name>BLL_TECNICA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL_NEGOCIO\BLL_NEGOCIO.vbproj">
+      <Project>{e0180657-a367-4c41-9eab-75395e3cf20f}</Project>
+      <Name>BLL_NEGOCIO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\INTERFACES\INTERFACES.vbproj">
+      <Project>{417b58ac-4029-4bb0-ad68-5261faf06212}</Project>
+      <Name>INTERFACES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEGURIDAD\SEGURIDAD.vbproj">
+      <Project>{16bd06e4-bd61-4eac-a031-f2b57ef3f015}</Project>
+      <Name>SEGURIDAD</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AuzoniaFondo.png" />
+    <Content Include="NeuMek.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
